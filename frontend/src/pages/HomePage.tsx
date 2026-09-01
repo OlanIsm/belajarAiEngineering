@@ -117,66 +117,108 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           </div>
 
           {/* 2. MIDDLE ROW (3 CARDS: MODUL COMPLETED, QUIZ COMPLETED, STREAK) */}
+          {/* 2. STATS ROW (3 CARDS WITH LARGE ICON BADGES) */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
             
             {/* Card 1: MODUL COMPLETED */}
-            <div className="stat-card">
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5 }}>
-                  Modul Completed
-                </span>
-                <BookOpen size={16} color="var(--gold-rich)" />
+            <div className="stat-card" style={{ padding: '20px 22px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+                {/* Left side text */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                  <span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 700, fontFamily: 'JetBrains Mono', textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                    Modul Completed
+                  </span>
+                  <p className="font-heading" style={{ fontSize: 24, fontWeight: 800, color: 'var(--text-heading)', margin: 0, lineHeight: 1.2 }}>
+                    4 <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--text-muted)' }}>/ 12</span>
+                  </p>
+                  <p style={{ fontSize: 11, color: 'var(--gold-rich)', fontWeight: 700, margin: 0 }}>
+                    33% Selesai
+                  </p>
+                </div>
+
+                {/* Right side large icon logo */}
+                <div style={{
+                  width: 54, height: 54, borderRadius: 16,
+                  background: 'var(--nm-base)', boxShadow: 'var(--shadow-raise-sm)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  flexShrink: 0, border: '1px solid rgba(255, 122, 0, 0.2)',
+                }}>
+                  <BookOpen size={28} color="var(--gold-rich)" strokeWidth={2.2} />
+                </div>
               </div>
-              <p className="font-heading" style={{ fontSize: 22, fontWeight: 800, color: 'var(--text-heading)', marginTop: 4 }}>
-                4 <span style={{ fontSize: 12, fontWeight: 500, color: 'var(--text-muted)' }}>/ 12</span>
-              </p>
-              <p style={{ fontSize: 11, color: 'var(--gold-rich)', fontWeight: 700 }}>33% Selesai</p>
             </div>
 
             {/* Card 2: QUIZ COMPLETED */}
-            <div className="stat-card">
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5 }}>
-                  Quiz Completed
-                </span>
-                <Trophy size={16} color="var(--gold)" />
-              </div>
-              <p className="font-heading" style={{ fontSize: 20, fontWeight: 800, color: 'var(--text-heading)', marginTop: 4 }}>
-                2 <span style={{ fontSize: 11, fontWeight: 500, color: 'var(--text-muted)' }}>/ 5</span>
-              </p>
-              <p style={{ fontSize: 10, color: 'var(--gold)', fontWeight: 600 }}>Skor: 85%</p>
-            </div>
+            <div className="stat-card" style={{ padding: '20px 22px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+                {/* Left side text */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                  <span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 700, fontFamily: 'JetBrains Mono', textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                    Quiz Completed
+                  </span>
+                  <p className="font-heading" style={{ fontSize: 24, fontWeight: 800, color: 'var(--text-heading)', margin: 0, lineHeight: 1.2 }}>
+                    2 <span style={{ fontSize: 13, fontWeight: 500, color: 'var(--text-muted)' }}>/ 5</span>
+                  </p>
+                  <p style={{ fontSize: 11, color: 'var(--gold-rich)', fontWeight: 700, margin: 0 }}>
+                    Skor: 85%
+                  </p>
+                </div>
 
-            {/* Card 3: STREAK CARD (COMPACT FIRE CARD) */}
-            <div className="stat-card" style={{ background: 'var(--nm-base)', boxShadow: 'var(--shadow-raise-sm)', border: '1px solid rgba(255,153,0,0.3)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                <span style={{ fontSize: 11, color: '#D97706', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.5 }}>
-                  Streak 🔥
-                </span>
+                {/* Right side large icon logo */}
                 <div style={{
-                  width: 22, height: 22, borderRadius: '50%', background: 'linear-gradient(135deg, #FF9900, #FF5500)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 2px 6px rgba(255,85,0,0.4)',
+                  width: 54, height: 54, borderRadius: 16,
+                  background: 'var(--nm-base)', boxShadow: 'var(--shadow-raise-sm)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  flexShrink: 0, border: '1px solid rgba(255, 122, 0, 0.2)',
                 }}>
-                  <Flame size={13} color="#ffffff" />
+                  <Trophy size={28} color="var(--gold)" strokeWidth={2.2} />
                 </div>
               </div>
-              <p className="font-heading" style={{ fontSize: 20, fontWeight: 800, color: 'var(--text-heading)', marginTop: 4 }}>
-                7 <span style={{ fontSize: 11, fontWeight: 600, color: '#D97706' }}>Hari</span>
-              </p>
-              
-              {/* Mini Days Dots */}
-              <div style={{ display: 'flex', gap: 3, marginTop: 2 }}>
-                {streakDays.map((d, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      flex: 1,
-                      height: 4,
-                      borderRadius: 2,
-                      background: d.isToday ? '#FF5500' : d.active ? 'var(--gold-rich)' : 'rgba(0,0,0,0.1)',
-                    }}
-                  />
-                ))}
+            </div>
+
+            {/* Card 3: STREAK CARD */}
+            <div className="stat-card" style={{
+              padding: '20px 22px',
+              background: 'var(--nm-base)',
+              boxShadow: 'var(--shadow-raise-sm)',
+              border: '1px solid rgba(255, 122, 0, 0.35)',
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+                {/* Left side text */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 4, flex: 1 }}>
+                  <span style={{ fontSize: 11, color: 'var(--gold-rich)', fontWeight: 800, fontFamily: 'JetBrains Mono', textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                    Streak 🔥
+                  </span>
+                  <p className="font-heading" style={{ fontSize: 24, fontWeight: 800, color: 'var(--text-heading)', margin: 0, lineHeight: 1.2 }}>
+                    7 <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--gold-rich)' }}>Hari</span>
+                  </p>
+                  
+                  {/* Mini Days Dots */}
+                  <div style={{ display: 'flex', gap: 3, marginTop: 4 }}>
+                    {streakDays.map((d, i) => (
+                      <div
+                        key={i}
+                        style={{
+                          flex: 1,
+                          height: 4,
+                          borderRadius: 2,
+                          background: d.isToday ? '#FF5500' : d.active ? 'var(--gold-rich)' : 'rgba(168,184,200,0.3)',
+                        }}
+                      />
+                    ))}
+                  </div>
+                </div>
+
+                {/* Right side large flame logo */}
+                <div style={{
+                  width: 54, height: 54, borderRadius: 16,
+                  background: 'linear-gradient(135deg, #FF7A00, #E65100)',
+                  boxShadow: '0 4px 14px rgba(255, 122, 0, 0.4)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  flexShrink: 0,
+                }}>
+                  <Flame size={28} color="#ffffff" strokeWidth={2.2} />
+                </div>
               </div>
             </div>
 
