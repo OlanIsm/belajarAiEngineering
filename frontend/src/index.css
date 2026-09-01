@@ -55,6 +55,48 @@
   --radius-pill: 999px;
 }
 
+/* ─── DARK LACQUER MODE TOKENS ───────────────────────────── */
+[data-theme="dark"] {
+  --nm-base:  #1e222d;
+  --nm-dark:  #13161e;
+  --nm-light: #292e3c;
+
+  /* Brand */
+  --gold:       #FFD700;
+  --gold-rich:  #FFC857;
+  --gold-pale:  #2B2400;
+  --patina:     #4FD1C5;
+  --patina-pale: #0F2D2A;
+
+  /* Text */
+  --text-heading: #F8FAFC;
+  --text-body:    #CBD5E1;
+  --text-muted:   #94A3B8;
+  --text-mono:    #94A3B8;
+
+  /* Status */
+  --success: #4ADE80;
+  --danger:  #F87171;
+
+  /* ─── CORE OBSIDIAN NEUMORPHIC SHADOWS ─── */
+  --shadow-raise:
+    5px 5px 17px #13161e,
+    -5px -5px 17px #292e3c;
+
+  --shadow-raise-sm:
+    3px 3px 10px #13161e,
+    -3px -3px 10px #292e3c;
+
+  --shadow-inset:
+    inset 5px 5px 17px #13161e,
+    inset -5px -5px 17px #292e3c;
+
+  --shadow-inset-sm:
+    inset 3px 3px 10px #13161e,
+    inset -3px -3px 10px #292e3c;
+}
+
+
 /* ─── RESET ──────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 

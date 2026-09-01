@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { MessageSquareCode } from 'lucide-react';
 import './index.css';
@@ -17,6 +17,21 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [showChat, setShowChat] = useState(false);
 
+  // Global Theme State ('light' | 'dark')
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    const saved = localStorage.getItem('theme');
+    return (saved === 'dark' || saved === 'light') ? saved : 'light';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+  };
+
   // Not authenticated → show auth screen
   if (!token) return (
     <>
@@ -30,18 +45,23 @@ export default function App() {
       case 'home':     return <HomePage onNavigate={setActiveTab} />;
       case 'study':    return <StudyPage />;
       case 'quiz':     return <QuizPage />;
-      case 'settings': return <SettingsPage />;
+      case 'settings': return <SettingsPage theme={theme} onToggleTheme={toggleTheme} />;
       default:         return <HomePage onNavigate={setActiveTab} />;
     }
   };
 
-  // Study page has its own full-height layout (no padding wrapper needed)
+  // Study page has its own full-height layout
   const isStudyPage = activeTab === 'study';
 
   return (
     <>
       <div className="app-layout">
-        <Sidebar activeTab={activeTab} onNavigate={setActiveTab} />
+        <Sidebar
+          activeTab={activeTab}
+          onNavigate={setActiveTab}
+          theme={theme}
+          onToggleTheme={toggleTheme}
+        />
 
         {isStudyPage ? (
           <div style={{ flex: 1, overflow: 'hidden' }}>

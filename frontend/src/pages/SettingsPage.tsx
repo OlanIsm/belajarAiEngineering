@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
-import { User, LogOut, Bell, Sparkles } from 'lucide-react';
+import { User, LogOut } from 'lucide-react';
 import { useAuthStore } from '../store/authStore';
 import ToggleSwitch from '../components/ToggleSwitch';
 
-export default function SettingsPage() {
+interface SettingsPageProps {
+  theme: 'light' | 'dark';
+  onToggleTheme: () => void;
+}
+
+export default function SettingsPage({ theme, onToggleTheme }: SettingsPageProps) {
   const { user, logout } = useAuthStore();
   const [notifOn, setNotifOn] = useState(true);
   const [quizReminder, setQuizReminder] = useState(true);
-  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <div>
@@ -47,27 +51,50 @@ export default function SettingsPage() {
       <div className="card" style={{ marginBottom: 24 }}>
         <p className="eyebrow" style={{ marginBottom: 20 }}>PREFERENSI</p>
 
-        {[
-          { label: 'Notifikasi Push', desc: 'Terima update progres & pengingat belajar', checked: notifOn, onChange: setNotifOn },
-          { label: 'Quiz Reminder', desc: 'Pengingat tiap Senin sebelum quiz direset', checked: quizReminder, onChange: setQuizReminder },
-          { label: 'Dark Lacquer Mode', desc: 'Coming soon — tema gelap premium', checked: darkMode, onChange: setDarkMode },
-        ].map((pref) => (
-          <div
-            key={pref.label}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 0', borderBottom: '1px solid rgba(170,170,170,0.2)' }}
-          >
-            <div>
-              <p style={{ fontWeight: 600, fontSize: 14, color: 'var(--text-heading)' }}>{pref.label}</p>
-              <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>{pref.desc}</p>
-            </div>
-            <ToggleSwitch
-              checked={pref.checked}
-              onChange={pref.onChange}
-              width="4.5rem"
-              accentHue="140deg"
-            />
+        <div
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 0', borderBottom: '1px solid rgba(170,170,170,0.2)' }}
+        >
+          <div>
+            <p style={{ fontWeight: 600, fontSize: 14, color: 'var(--text-heading)' }}>Notifikasi Push</p>
+            <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>Terima update progres & pengingat belajar</p>
           </div>
-        ))}
+          <ToggleSwitch
+            checked={notifOn}
+            onChange={setNotifOn}
+            width="4.5rem"
+            accentHue="140deg"
+          />
+        </div>
+
+        <div
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 0', borderBottom: '1px solid rgba(170,170,170,0.2)' }}
+        >
+          <div>
+            <p style={{ fontWeight: 600, fontSize: 14, color: 'var(--text-heading)' }}>Quiz Reminder</p>
+            <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>Pengingat tiap Senin sebelum quiz direset</p>
+          </div>
+          <ToggleSwitch
+            checked={quizReminder}
+            onChange={setQuizReminder}
+            width="4.5rem"
+            accentHue="140deg"
+          />
+        </div>
+
+        <div
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '14px 0' }}
+        >
+          <div>
+            <p style={{ fontWeight: 600, fontSize: 14, color: 'var(--text-heading)' }}>Dark Lacquer Mode</p>
+            <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>Tema gelap Neumorphic premium yang elegan</p>
+          </div>
+          <ToggleSwitch
+            checked={theme === 'dark'}
+            onChange={onToggleTheme}
+            width="4.5rem"
+            accentHue="220deg"
+          />
+        </div>
       </div>
 
       {/* App Info */}

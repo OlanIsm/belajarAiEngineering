@@ -9,12 +9,16 @@ import {
   ChevronLeft,
   ChevronRight,
   Cpu,
+  Moon,
+  Sun,
 } from 'lucide-react';
 import { useAuthStore } from '../store/authStore';
 
 interface SidebarProps {
   activeTab: string;
   onNavigate: (tab: string) => void;
+  theme: 'light' | 'dark';
+  onToggleTheme: () => void;
 }
 
 const navItems = [
@@ -24,7 +28,7 @@ const navItems = [
   { id: 'interview', icon: Briefcase, label: 'Interview Qs', disabled: true, badge: 'SOON' },
 ];
 
-export default function Sidebar({ activeTab, onNavigate }: SidebarProps) {
+export default function Sidebar({ activeTab, onNavigate, theme, onToggleTheme }: SidebarProps) {
   const [collapsed, setCollapsed] = useState(false);
   const { logout } = useAuthStore();
 
@@ -37,7 +41,7 @@ export default function Sidebar({ activeTab, onNavigate }: SidebarProps) {
       {/* Brand Header */}
       <div className="sidebar-header">
         <div className="sidebar-logo">
-          <Cpu size={22} color="#2D3748" />
+          <Cpu size={22} color={theme === 'dark' ? 'var(--gold)' : '#2D3748'} />
         </div>
         {!collapsed && (
           <div className="sidebar-brand">
@@ -75,7 +79,7 @@ export default function Sidebar({ activeTab, onNavigate }: SidebarProps) {
 
       <div className="sidebar-divider" style={{ margin: '0 16px' }} />
 
-      {/* Settings & Logout */}
+      {/* Settings, Theme Toggle & Logout */}
       <div style={{ padding: '12px' }}>
         <button
           className={`nav-item${activeTab === 'settings' ? ' active' : ''}`}
@@ -86,6 +90,27 @@ export default function Sidebar({ activeTab, onNavigate }: SidebarProps) {
             <Settings size={18} strokeWidth={2.2} />
           </div>
           {!collapsed && <span className="nav-label">Settings</span>}
+        </button>
+
+        {/* Theme Toggle Button */}
+        <button
+          className="nav-item"
+          onClick={onToggleTheme}
+          title={collapsed ? (theme === 'dark' ? 'Light Mode' : 'Dark Mode') : undefined}
+          style={{ marginTop: 4 }}
+        >
+          <div className="nav-icon-wrap">
+            {theme === 'dark' ? (
+              <Sun size={18} strokeWidth={2.2} color="var(--gold)" />
+            ) : (
+              <Moon size={18} strokeWidth={2.2} color="var(--text-heading)" />
+            )}
+          </div>
+          {!collapsed && (
+            <span className="nav-label">
+              {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+            </span>
+          )}
         </button>
 
         <button
