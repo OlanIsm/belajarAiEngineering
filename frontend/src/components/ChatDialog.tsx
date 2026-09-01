@@ -35,11 +35,12 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
         {/* Header */}
         <div className="chat-header">
           <div style={{
-            width: 38, height: 38, borderRadius: '50%',
-            background: 'var(--gold)', boxShadow: 'var(--shadow-raise-sm)',
+            width: 42, height: 42, borderRadius: '50%',
+            background: 'var(--nm-base)', boxShadow: 'var(--shadow-raise-sm)',
             display: 'flex', alignItems: 'center', justifyContent: 'center',
+            padding: 4, overflow: 'hidden', flexShrink: 0,
           }}>
-            <Bot size={20} color="#2D3748" />
+            <img src="/macot_chatbot_icon.png" alt="AI Mascot" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
           </div>
           <div style={{ flex: 1 }}>
             <p className="font-heading" style={{ fontWeight: 700, color: 'var(--text-heading)', fontSize: 15 }}>

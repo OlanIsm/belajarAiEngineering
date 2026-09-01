@@ -74,10 +74,15 @@ export default function App() {
         )}
       </div>
 
-      {/* Floating Chat Button */}
-      <button className="fab-chat" onClick={() => setShowChat(true)}>
-        <MessageSquareCode size={18} strokeWidth={2.2} />
-        AI Tutor Chat
+      {/* Floating Mascot Chat Button */}
+      <button
+        className="fab-chat"
+        onClick={() => setShowChat(true)}
+        title="Tanya AI Tutor"
+        aria-label="AI Tutor Chatbot"
+      >
+        <img src="/macot_chatbot_icon.png" alt="AI Tutor Mascot" className="mascot-img" />
+        <span className="online-dot" />
       </button>
 
       {/* Chat Dialog */}
