@@ -33,10 +33,11 @@ export default function AuthPage() {
             src="/logo.png"
             alt="BelajarAI Logo"
             style={{
-              width: 88,
-              height: 88,
+              width: 150,
+              height: 150,
               objectFit: 'contain',
-              filter: 'drop-shadow(0 8px 20px rgba(255, 122, 0, 0.45))',
+              filter: 'drop-shadow(0 12px 28px rgba(0, 0, 0, 0.45)) drop-shadow(0 4px 12px rgba(255, 122, 0, 0.15))',
+              marginBottom: 4,
             }}
           />
           <div className="mascot-bubble">
