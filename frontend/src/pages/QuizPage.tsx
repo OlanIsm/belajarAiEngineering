@@ -81,10 +81,10 @@ export default function QuizPage() {
       {/* Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 32 }}>
         <div>
-          <p className="eyebrow" style={{ marginBottom: 6, color: 'var(--patina)' }}>
+          <p className="eyebrow" style={{ marginBottom: 6 }}>
             WEEKLY QUIZ CYCLE #{String(currentQuiz.weekNumber).padStart(2, '0')}
           </p>
-          <h1 className="font-heading" style={{ fontSize: 26, fontWeight: 800, color: 'var(--text-heading)' }}>
+          <h1 className="font-heading" style={{ fontSize: 28, fontWeight: 800, color: 'var(--text-heading)' }}>
             Evaluasi Pemahaman AI Engineering
           </h1>
         </div>

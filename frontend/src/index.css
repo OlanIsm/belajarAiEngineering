@@ -4,7 +4,7 @@
    Card radius: 78px | Shadow: 5px 5px 17px / -5px -5px 17px
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:wght@400;600;700&display=swap');
 
 /* ─── TOKENS ─────────────────────────────────────────────── */
 :root {
@@ -15,13 +15,13 @@
 
   /* Brand */
   --gold:       #FFD700;
-  --gold-rich:  #FFC857;
+  --gold-rich:  #D97706;
   --gold-pale:  #FFF8D0;
-  --patina:     #2EC4B6;
-  --patina-pale: #E0F7F5;
+  --patina:     #D97706;
+  --patina-pale: #FEF3C7;
 
   /* Text - High Contrast Readability */
-  --text-heading: #1E293B;
+  --text-heading: #0F172A;
   --text-body:    #334155;
   --text-muted:   #64748B;
   --text-mono:    #64748B;
@@ -65,8 +65,8 @@
   --gold:       #FFD700;
   --gold-rich:  #FFC857;
   --gold-pale:  #2B2400;
-  --patina:     #4FD1C5;
-  --patina-pale: #0F2D2A;
+  --patina:     #FFC857;
+  --patina-pale: #2B2400;
 
   /* Text - Maximum Readability & Sharp Contrast */
   --text-heading: #FFFFFF;
@@ -104,9 +104,9 @@ html, body, #root {
   height: 100%;
   background: var(--nm-base);
   color: var(--text-body);
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  line-height: 1.6;
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -117,16 +117,16 @@ html, body, #root {
 .nm-inset-sm { background: var(--nm-base); box-shadow: var(--shadow-inset-sm); }
 .nm-flat     { background: var(--nm-base); }
 
-.font-heading { font-family: 'Outfit', sans-serif; }
+.font-heading, h1, h2, h3, h4, h5, h6 { font-family: 'Sora', sans-serif; }
 .font-mono    { font-family: 'JetBrains Mono', monospace; }
 
 .eyebrow {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 2px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--text-mono);
+  color: var(--gold-rich);
 }
 
 /* ─── LAYOUT ─────────────────────────────────────────────── */
@@ -184,8 +184,8 @@ html, body, #root {
 }
 
 .sidebar-brand h2 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 14px;
+  font-family: 'Sora', sans-serif;
+  font-size: 15.5px;
   font-weight: 700;
   color: var(--text-heading);
   line-height: 1.2;
@@ -193,11 +193,11 @@ html, body, #root {
 
 .sidebar-brand span {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 9px;
-  font-weight: 600;
+  font-size: 9.5px;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--patina);
+  color: var(--gold-rich);
 }
 
 .sidebar-divider {
@@ -258,8 +258,8 @@ html, body, #root {
 }
 
 .nav-item .nav-label {
-  font-size: 13.5px;
-  font-weight: 500;
+  font-size: 14.5px;
+  font-weight: 600;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -327,8 +327,8 @@ html, body, #root {
   padding: 13px 26px;
   border-radius: var(--radius-md);
   border: none;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.12s ease;
@@ -420,8 +420,8 @@ html, body, #root {
   border: none;
   outline: none;
   background: transparent;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
   color: var(--text-heading);
 }
 
@@ -611,26 +611,26 @@ html, body, #root {
 
 /* ─── MARKDOWN CONTENT ────────────────────────────────────── */
 .markdown-content {
-  font-size: 15.5px;
-  line-height: 1.7;
+  font-size: 16.5px;
+  line-height: 1.75;
 }
 
 .markdown-content h1,
 .markdown-content h2,
 .markdown-content h3 {
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Sora', sans-serif;
   color: var(--text-heading);
   margin-bottom: 14px;
   margin-top: 26px;
   letter-spacing: -0.3px;
 }
-.markdown-content h1 { font-size: 26px; font-weight: 800; }
-.markdown-content h2 { font-size: 21px; font-weight: 700; }
-.markdown-content h3 { font-size: 18px; font-weight: 700; }
+.markdown-content h1 { font-size: 27px; font-weight: 800; }
+.markdown-content h2 { font-size: 22px; font-weight: 700; }
+.markdown-content h3 { font-size: 19px; font-weight: 700; }
 
-.markdown-content p  { color: var(--text-body); line-height: 1.75; margin-bottom: 16px; font-size: 15.5px; }
+.markdown-content p  { color: var(--text-body); line-height: 1.75; margin-bottom: 16px; font-size: 16.5px; }
 .markdown-content ul, .markdown-content ol { padding-left: 24px; margin-bottom: 16px; }
-.markdown-content li { color: var(--text-body); margin-bottom: 8px; line-height: 1.65; font-size: 15px; }
+.markdown-content li { color: var(--text-body); margin-bottom: 8px; line-height: 1.7; font-size: 16px; }
 
 .markdown-content code {
   font-family: 'JetBrains Mono', monospace;
@@ -673,8 +673,8 @@ html, body, #root {
   box-shadow: var(--shadow-raise);
   border: none;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
   font-weight: 700;
   color: var(--text-heading);
   transition: all 0.15s;
@@ -960,7 +960,7 @@ html, body, #root {
   min-width: 180px;
   padding: 0 20px;
   height: 52px;
-  font-family: 'Inter', 'Poppins', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-style: normal;
   font-size: 15px;
   font-weight: 700;

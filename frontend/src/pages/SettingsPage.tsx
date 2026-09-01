@@ -15,8 +15,8 @@ export default function SettingsPage({ theme, onToggleTheme }: SettingsPageProps
 
   return (
     <div>
-      <p className="eyebrow" style={{ marginBottom: 6, color: 'var(--patina)' }}>PREFERENCES</p>
-      <h1 className="font-heading" style={{ fontSize: 26, fontWeight: 800, color: 'var(--text-heading)', marginBottom: 32 }}>
+      <p className="eyebrow" style={{ marginBottom: 6 }}>PREFERENCES</p>
+      <h1 className="font-heading" style={{ fontSize: 28, fontWeight: 800, color: 'var(--text-heading)', marginBottom: 32 }}>
         Pengaturan & Profil
       </h1>
 
@@ -105,7 +105,7 @@ export default function SettingsPage({ theme, onToggleTheme }: SettingsPageProps
           Platform pembelajaran interaktif AI Engineering dengan kurikulum terstruktur,
           quiz mingguan, dan AI Tutor berbasis Gemini 1.5 Flash.
         </p>
-        <p style={{ fontFamily: 'JetBrains Mono', fontSize: 11, color: 'var(--patina)', marginTop: 12, letterSpacing: 1 }}>
+        <p style={{ fontFamily: 'JetBrains Mono', fontSize: 11, color: 'var(--gold-rich)', marginTop: 12, letterSpacing: 1 }}>
           v1.0.0 — Stack: React + NestJS + MongoDB
         </p>
       </div>

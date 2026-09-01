@@ -37,8 +37,8 @@ export default function StudyPage() {
       {/* Module Sidebar */}
       <aside className="module-sidebar">
         <div style={{ padding: '20px 16px 12px' }}>
-          <p className="eyebrow" style={{ marginBottom: 4, color: 'var(--patina)' }}>COURSE CONTENT</p>
-          <h2 className="font-heading" style={{ fontSize: 16, fontWeight: 700, color: 'var(--text-heading)', lineHeight: 1.3 }}>
+          <p className="eyebrow" style={{ marginBottom: 4 }}>COURSE CONTENT</p>
+          <h2 className="font-heading" style={{ fontSize: 17, fontWeight: 700, color: 'var(--text-heading)', lineHeight: 1.3 }}>
             {selectedCourse.title}
           </h2>
         </div>
@@ -55,7 +55,7 @@ export default function StudyPage() {
               >
                 <span className="module-check" style={{ flexShrink: 0, display: 'flex', alignItems: 'center' }}>
                   {mod.isCompleted ? (
-                    <CheckCircle2 size={16} color="var(--patina)" />
+                    <CheckCircle2 size={16} color="var(--gold-rich)" />
                   ) : (
                     <Play size={14} color="var(--text-muted)" />
                   )}
@@ -74,8 +74,8 @@ export default function StudyPage() {
             {/* Top Bar */}
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 24 }}>
               <div>
-                <p className="eyebrow" style={{ marginBottom: 6, color: 'var(--patina)' }}>LESSON CONTENT</p>
-                <h1 className="font-heading" style={{ fontSize: 26, fontWeight: 800, color: 'var(--text-heading)' }}>
+                <p className="eyebrow" style={{ marginBottom: 6 }}>LESSON CONTENT</p>
+                <h1 className="font-heading" style={{ fontSize: 28, fontWeight: 800, color: 'var(--text-heading)' }}>
                   {activeModule.title}
                 </h1>
               </div>

@@ -49,8 +49,8 @@ export default function HomePage({ onNavigate }: HomePageProps) {
     <div>
       {/* Top Header - Clean greeting without membership level box */}
       <div style={{ marginBottom: 24 }}>
-        <p className="eyebrow" style={{ marginBottom: 4, color: 'var(--patina)' }}>MY LEARNING JOURNEY</p>
-        <h1 className="font-heading" style={{ fontSize: 28, fontWeight: 800, color: 'var(--text-heading)' }}>
+        <p className="eyebrow" style={{ marginBottom: 4 }}>MY LEARNING JOURNEY</p>
+        <h1 className="font-heading" style={{ fontSize: 30, fontWeight: 800, color: 'var(--text-heading)' }}>
           Halo, {user?.name ?? 'Learner'}! 👋
         </h1>
       </div>
@@ -63,7 +63,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
           {/* 1. MODUL TERAKHIR (CARD UTAMA BESAR) */}
           <div className="card" style={{ padding: 26, background: 'var(--nm-base)' }}>
-            <p className="eyebrow" style={{ marginBottom: 14, color: 'var(--patina)' }}>
+            <p className="eyebrow" style={{ marginBottom: 14 }}>
               MODUL TERAKHIR YANG KAMU PELAJARI
             </p>
 
@@ -84,7 +84,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   flexShrink: 0,
                   border: '1px solid rgba(255,255,255,0.6)',
                 }}>
-                  <Brain size={36} color="var(--patina)" />
+                  <Brain size={36} color="var(--gold-rich)" />
                   <span style={{ fontSize: 9, fontFamily: 'JetBrains Mono', color: 'var(--text-muted)', fontWeight: 700 }}>
                     AI ENGINE
                   </span>
@@ -94,9 +94,9 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 <div style={{ flex: 1, minWidth: 220, display: 'flex', flexDirection: 'column', gap: 8 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                     <span style={{
-                      padding: '2px 8px', borderRadius: 6,
+                      padding: '3px 10px', borderRadius: 6,
                       background: 'var(--nm-base)', boxShadow: 'var(--shadow-raise-sm)',
-                      fontSize: 10, fontFamily: 'JetBrains Mono', fontWeight: 700, color: 'var(--patina)',
+                      fontSize: 11, fontFamily: 'JetBrains Mono', fontWeight: 700, color: 'var(--gold-rich)',
                     }}>
                       {activeCourse.level ?? 'BEGINNER'}
                     </span>
@@ -148,12 +148,12 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                 <span style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5 }}>
                   Modul Completed
                 </span>
-                <BookOpen size={16} color="var(--patina)" />
+                <BookOpen size={16} color="var(--gold-rich)" />
               </div>
-              <p className="font-heading" style={{ fontSize: 20, fontWeight: 800, color: 'var(--text-heading)', marginTop: 4 }}>
-                4 <span style={{ fontSize: 11, fontWeight: 500, color: 'var(--text-muted)' }}>/ 12</span>
+              <p className="font-heading" style={{ fontSize: 22, fontWeight: 800, color: 'var(--text-heading)', marginTop: 4 }}>
+                4 <span style={{ fontSize: 12, fontWeight: 500, color: 'var(--text-muted)' }}>/ 12</span>
               </p>
-              <p style={{ fontSize: 10, color: 'var(--patina)', fontWeight: 600 }}>33% Selesai</p>
+              <p style={{ fontSize: 11, color: 'var(--gold-rich)', fontWeight: 700 }}>33% Selesai</p>
             </div>
 
             {/* Card 2: QUIZ COMPLETED */}
@@ -196,7 +196,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                       flex: 1,
                       height: 4,
                       borderRadius: 2,
-                      background: d.isToday ? '#FF5500' : d.active ? 'var(--patina)' : 'rgba(0,0,0,0.1)',
+                      background: d.isToday ? '#FF5500' : d.active ? 'var(--gold-rich)' : 'rgba(0,0,0,0.1)',
                     }}
                   />
                 ))}
@@ -245,11 +245,11 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         {/* ─── RIGHT COLUMN: SCROLLABLE ROADMAP ──────────────────────── */}
         <div className="roadmap-scroll-card">
           <div>
-            <p className="eyebrow" style={{ marginBottom: 4, color: 'var(--patina)' }}>AI ENGINEERING ROADMAP</p>
-            <h2 className="font-heading" style={{ fontSize: 18, fontWeight: 800, color: 'var(--text-heading)' }}>
+            <p className="eyebrow" style={{ marginBottom: 4 }}>AI ENGINEERING ROADMAP</p>
+            <h2 className="font-heading" style={{ fontSize: 20, fontWeight: 800, color: 'var(--text-heading)' }}>
               Learning Journey
             </h2>
-            <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>
+            <p style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 2 }}>
               Scroll & keeptrack alur pembelajaranmu
             </p>
           </div>
@@ -292,8 +292,8 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   >
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
                       <span style={{
-                        fontSize: 9, fontFamily: 'JetBrains Mono', fontWeight: 700,
-                        color: isCurrent ? 'var(--gold)' : 'var(--patina)', letterSpacing: 1,
+                        fontSize: 10, fontFamily: 'JetBrains Mono', fontWeight: 700,
+                        color: isCurrent ? 'var(--gold)' : 'var(--gold-rich)', letterSpacing: 1,
                       }}>
                         {course.level ?? 'BEGINNER'}
                       </span>

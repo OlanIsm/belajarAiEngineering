@@ -45,7 +45,7 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
             <p className="font-heading" style={{ fontWeight: 700, color: 'var(--text-heading)', fontSize: 15 }}>
               AI Tutor Assistant
             </p>
-            <p style={{ fontSize: 11, fontFamily: 'JetBrains Mono', color: 'var(--patina)', letterSpacing: 1 }}>
+            <p style={{ fontSize: 11, fontFamily: 'JetBrains Mono', color: 'var(--gold-rich)', letterSpacing: 1 }}>
               GEMINI 1.5 FLASH
             </p>
           </div>
@@ -58,7 +58,7 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
         <div className="chat-messages">
           {messages.length === 0 && (
             <div style={{ textAlign: 'center', padding: '20px 0', color: 'var(--text-muted)', fontSize: 13, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
-              <Sparkles size={20} color="var(--patina)" />
+              <Sparkles size={20} color="var(--gold-rich)" />
               <span>Tanyakan apa saja tentang AI Engineering, Python, atau Machine Learning!</span>
             </div>
           )}
@@ -69,7 +69,7 @@ export default function ChatDialog({ onClose }: ChatDialogProps) {
           ))}
           {isLoading && (
             <div className="chat-bubble ai" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <div className="spinner" style={{ borderTopColor: 'var(--patina)' }} />
+              <div className="spinner" style={{ borderTopColor: 'var(--gold)' }} />
               <span style={{ color: 'var(--text-muted)', fontSize: 13 }}>AI sedang berpikir...</span>
             </div>
           )}
