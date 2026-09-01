@@ -48,9 +48,9 @@ export default function HomePage({ onNavigate }: HomePageProps) {
   return (
     <div>
       {/* Top Header - Clean greeting without membership level box */}
-      <div style={{ marginBottom: 24 }}>
+      <div style={{ marginBottom: 16 }}>
         <p className="eyebrow" style={{ marginBottom: 4 }}>MY LEARNING JOURNEY</p>
-        <h1 className="font-heading" style={{ fontSize: 30, fontWeight: 800, color: 'var(--text-heading)' }}>
+        <h1 className="font-heading" style={{ fontSize: 28, fontWeight: 800, color: 'var(--text-heading)' }}>
           Halo, {user?.name ?? 'Learner'}! 👋
         </h1>
       </div>
@@ -62,7 +62,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
         <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
 
           {/* 1. MODUL TERAKHIR (CARD UTAMA BESAR) */}
-          <div className="card" style={{ padding: 26, background: 'var(--nm-base)' }}>
+          <div className="card" style={{ padding: 26, background: 'var(--nm-base)', borderRadius: 'var(--radius-card)', boxShadow: 'var(--shadow-raise)' }}>
             <p className="eyebrow" style={{ marginBottom: 14 }}>
               MODUL TERAKHIR YANG KAMU PELAJARI
             </p>

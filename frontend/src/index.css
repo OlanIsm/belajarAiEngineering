@@ -1372,16 +1372,20 @@ h6 {
 }
 
 .uiverse-gold-btn .state {
-  padding-left: 20px;
+  padding-left: 0;
   z-index: 3;
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .uiverse-gold-btn .state--default {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 /* ─── HOMEPAGE DQLAB DASHBOARD LAYOUT ─────────────────── */
@@ -1390,7 +1394,9 @@ h6 {
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   align-items: flex-start;
-  height: calc(100vh - 105px);
+  height: calc(100vh - 118px);
+  padding: 10px 10px 16px 10px;
+  margin: -10px -10px 0 -10px;
   overflow: hidden;
 }
 
