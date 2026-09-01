@@ -29,8 +29,8 @@ export default function AuthPage() {
       <div className="auth-card">
         {/* Mascot placeholder */}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
-          <div className="mascot-avatar">
-            <Sparkles size={26} color="#2D3748" />
+          <div className="mascot-avatar" style={{ overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <img src="/logo.png" alt="BelajarAI Logo" style={{ width: 32, height: 32, objectFit: 'contain' }} />
           </div>
           <div className="mascot-bubble">
             Selamat Datang di Belajar AI Engineering!

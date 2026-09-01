@@ -41,7 +41,7 @@ export default function Sidebar({ activeTab, onNavigate, theme, onToggleTheme }:
       {/* Brand Header */}
       <div className="sidebar-header">
         <div className="sidebar-logo">
-          <Cpu size={22} color={theme === 'dark' ? 'var(--gold)' : '#2D3748'} />
+          <img src="/logo.png" alt="BelajarAI Logo" style={{ width: 28, height: 28, objectFit: 'contain' }} />
         </div>
         {!collapsed && (
           <div className="sidebar-brand">
