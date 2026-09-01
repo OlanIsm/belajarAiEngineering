@@ -171,7 +171,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             </div>
 
             {/* Card 3: STREAK CARD (COMPACT FIRE CARD) */}
-            <div className="stat-card" style={{ background: 'linear-gradient(145deg, #e6e6e6, #ffffff)', border: '1px solid rgba(255,153,0,0.3)' }}>
+            <div className="stat-card" style={{ background: 'var(--nm-base)', boxShadow: 'var(--shadow-raise-sm)', border: '1px solid rgba(255,153,0,0.3)' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <span style={{ fontSize: 11, color: '#D97706', fontWeight: 800, textTransform: 'uppercase', letterSpacing: 0.5 }}>
                   Streak 🔥
@@ -271,7 +271,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                     {isCompleted ? (
                       <Check size={12} color="#ffffff" strokeWidth={3} />
                     ) : isCurrent ? (
-                      <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#2D3748' }} />
+                      <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--gold)' }} />
                     ) : (
                       <span style={{ fontSize: 9, color: 'var(--text-muted)' }}>{index + 1}</span>
                     )}
@@ -282,7 +282,8 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                     className="card-sm"
                     style={{
                       padding: 16,
-                      background: isCurrent ? 'linear-gradient(145deg, #e4e4e4, #ffffff)' : 'var(--nm-base)',
+                      background: 'var(--nm-base)',
+                      boxShadow: isCurrent ? 'var(--shadow-inset-sm)' : 'var(--shadow-raise-sm)',
                       border: isCurrent ? '1.5px solid var(--gold)' : '1px solid transparent',
                       cursor: 'pointer',
                       transition: 'all 0.2s ease',
