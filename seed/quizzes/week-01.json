@@ -1,0 +1,110 @@
+{
+  "weekNumber": 1,
+  "year": 2026,
+  "resetDay": "Monday",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "question": "Which Python data type is mutable?",
+      "options": ["String", "Tuple", "List", "Integer"],
+      "correctAnswer": "List",
+      "explanation": "Lists in Python are mutable, meaning their items can be altered, appended, or removed after creation.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "question": "What is the primary objective of Supervised Machine Learning?",
+      "options": [
+        "Discovering hidden clusters without labels",
+        "Learning a mapping function from input features to target labels",
+        "Generating synthetic image samples",
+        "Reducing dimensionality using PCA"
+      ],
+      "correctAnswer": "Learning a mapping function from input features to target labels",
+      "explanation": "Supervised learning uses labeled dataset pairs (X, y) to train models that predict labels for unseen inputs.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "q3",
+      "type": "codeFill",
+      "question": "Fill in the blank to define a function in Python:\n___ format_prompt(text):",
+      "options": ["func", "def", "function", "lambda"],
+      "correctAnswer": "def",
+      "explanation": "The 'def' keyword is used in Python to declare a function.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "question": "What does Chain-of-Thought (CoT) prompting encourage LLMs to do?",
+      "options": [
+        "Generate responses in a single step instantly",
+        "Break down reasoning step-by-step before outputting the final answer",
+        "Translate text into multiple languages simultaneously",
+        "Bypass system prompt guardrails"
+      ],
+      "correctAnswer": "Break down reasoning step-by-step before outputting the final answer",
+      "explanation": "CoT prompting directs LLMs to show their intermediate reasoning steps, improving accuracy on complex problem solving.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "q5",
+      "type": "shortAnswer",
+      "question": "What evaluation metric measures the ratio of true positive predictions out of total predicted positives?",
+      "correctAnswer": "Precision",
+      "explanation": "Precision = True Positives / (True Positives + False Positives).",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "question": "In Python OOP, what special method is automatically called when instantiating a new class instance?",
+      "options": ["__main__", "__init__", "__start__", "__construct__"],
+      "correctAnswer": "__init__",
+      "explanation": "The '__init__' method acts as the class constructor in Python.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "question": "Which of the following is an example of Unsupervised Machine Learning?",
+      "options": ["Logistic Regression", "K-Means Clustering", "Random Forest Classifier", "Linear Regression"],
+      "correctAnswer": "K-Means Clustering",
+      "explanation": "K-Means groups unlabeled data points into clusters based on distance metrics.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "q8",
+      "type": "codeFill",
+      "question": "Fill in the correct keyword to check if a condition is met:\n___ request_count > 10:\n    print('Rate limit exceeded')",
+      "options": ["when", "if", "check", "case"],
+      "correctAnswer": "if",
+      "explanation": "The 'if' keyword starts a conditional check in Python.",
+      "difficulty": "Easy"
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "question": "What is Few-Shot prompting?",
+      "options": [
+        "Providing 0 examples to the LLM",
+        "Providing 2-5 example input-output pairs in the prompt context",
+        "Running the prompt multiple times in a loop",
+        "Limiting the LLM response length to 5 tokens"
+      ],
+      "correctAnswer": "Providing 2-5 example input-output pairs in the prompt context",
+      "explanation": "Few-shot prompting provides a few explicit examples to demonstrate desired response structure and formatting.",
+      "difficulty": "Medium"
+    },
+    {
+      "id": "q10",
+      "type": "shortAnswer",
+      "question": "What HTTP status code is returned when a user exceeds the 10 req/min API rate limit?",
+      "correctAnswer": "429",
+      "explanation": "HTTP Status 429 indicates 'Too Many Requests'.",
+      "difficulty": "Easy"
+    }
+  ]
+}

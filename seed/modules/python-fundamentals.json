@@ -1,0 +1,50 @@
+[
+  {
+    "title": "1. Python Variables & Data Types",
+    "order": 1,
+    "readingTimeMinutes": 5,
+    "content": "# Variables & Fundamental Data Types in Python\n\nWelcome to Python Fundamentals! In AI Engineering, Python is the lingua franca for building neural networks, manipulating datasets, and calling LLM APIs.\n\n### Data Types\nPython has dynamic typing with key built-in data types:\n- **Integers & Floats**: Used for numerical computations (`int`, `float`).\n- **Strings**: Text representations (`str`).\n- **Lists & Dictionaries**: Core data structures for vectors and JSON payloads (`list`, `dict`).\n\n```python\n# Basic assignment\nmodel_name = 'gemini-3.5-flash'\ntemperature = 0.7\nmax_tokens = 1024\nis_active = True\n```",
+    "codeSnippets": [
+      {
+        "language": "python",
+        "code": "model_config = {\n    'model': 'gemini-3.5-flash',\n    'temperature': 0.7,\n    'max_tokens': 1024,\n    'stop_sequences': ['\\nUser:']\n}\n\nprint(f\"Configured model {model_config['model']} with temperature {model_config['temperature']}\")"
+      }
+    ]
+  },
+  {
+    "title": "2. Control Flow & Conditionals",
+    "order": 2,
+    "readingTimeMinutes": 6,
+    "content": "# Control Flow & Conditionals in Python\n\nControl flow enables dynamic execution paths based on conditions such as model status, API rate limits, or user input checks.\n\n### If-Else Statements & Loops\nUse `if`, `elif`, `else` along with `for` and `while` loops to iterate over datasets or streaming tokens.",
+    "codeSnippets": [
+      {
+        "language": "python",
+        "code": "request_count = 12\nrate_limit = 10\n\nif request_count > rate_limit:\n    print('Status 429: Too Many Requests. Rate limit exceeded.')\nelse:\n    print('Status 200: Request processed successfully.')"
+      }
+    ]
+  },
+  {
+    "title": "3. Functions & Reusable Modularity",
+    "order": 3,
+    "readingTimeMinutes": 7,
+    "content": "# Functions & Modularity in Python\n\nFunctions keep code clean, testable, and reusable when integrating multiple API services or preprocessing data pipelines.\n\n### Defining Functions\nFunctions use the `def` keyword and can take default arguments or keyword arguments.",
+    "codeSnippets": [
+      {
+        "language": "python",
+        "code": "def format_prompt(user_query: str, system_context: str = \"You are a helpful AI Engineering tutor.\") -> dict:\n    return {\n        \"system\": system_context,\n        \"user\": user_query.strip()\n    }\n\npayload = format_prompt(\"How does self-attention work in Transformers?\")\nprint(payload)"
+      }
+    ]
+  },
+  {
+    "title": "4. Object-Oriented Programming (OOP)",
+    "order": 4,
+    "readingTimeMinutes": 8,
+    "content": "# Object-Oriented Programming for AI Engineers\n\nOOP allows you to encapsulate models, agents, and memory stores into re-usable Python classes.\n\n### Classes & Methods\nUsing `class`, `__init__`, and instance methods.",
+    "codeSnippets": [
+      {
+        "language": "python",
+        "code": "class LLMClient:\n    def __init__(self, api_key: str, model: str = 'gemini-3.5-flash'):\n        self.api_key = api_key\n        self.model = model\n\n    def generate(self, prompt: str) -> str:\n        return f\"[Response from {self.model} for: '{prompt}']\"\n\nclient = LLMClient(api_key='sk-test-123')\nprint(client.generate('Explain gradient descent'))"
+      }
+    ]
+  }
+]

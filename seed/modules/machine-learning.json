@@ -1,0 +1,50 @@
+[
+  {
+    "title": "1. Introduction to Machine Learning",
+    "order": 1,
+    "readingTimeMinutes": 6,
+    "content": "# Introduction to Machine Learning\n\nMachine Learning is the study of computer algorithms that improve automatically through experience and data.\n\n### The ML Lifecycle\n1. **Data Collection & Preparation**\n2. **Feature Engineering**\n3. **Model Selection & Training**\n4. **Evaluation & Tuning**\n5. **Deployment & Monitoring**",
+    "codeSnippets": [
+      {
+        "language": "python",
+        "code": "import numpy as np\n\n# Simulating feature vector X and label vector y\nX = np.array([[1, 2], [2, 3], [3, 4], [4, 5]])\ny = np.array([0, 0, 1, 1])\n\nprint(f\"Feature matrix shape: {X.shape}, Target shape: {y.shape}\")"
+      }
+    ]
+  },
+  {
+    "title": "2. Supervised vs Unsupervised Learning",
+    "order": 2,
+    "readingTimeMinutes": 7,
+    "content": "# Supervised vs Unsupervised Learning\n\nUnderstanding the distinction between labeled data learning (Supervised) and pattern discovery without labels (Unsupervised).\n\n### Key Algorithms\n- **Supervised**: Linear Regression, Logistic Regression, Decision Trees, SVMs.\n- **Unsupervised**: K-Means Clustering, PCA (Dimensionality Reduction).",
+    "codeSnippets": [
+      {
+        "language": "python",
+        "code": "# Conceptual K-Means Clustering example\nfrom sklearn.cluster import KMeans\n\ndata = [[1, 2], [1, 4], [1, 0], [10, 2], [10, 4], [10, 0]]\nkmeans = KMeans(n_clusters=2, random_state=0).fit(data)\nprint(\"Cluster centroids:\\n\", kmeans.cluster_centers_)"
+      }
+    ]
+  },
+  {
+    "title": "3. Data Preprocessing & Feature Scaling",
+    "order": 3,
+    "readingTimeMinutes": 6,
+    "content": "# Data Preprocessing & Feature Scaling\n\nRaw data contains missing values, outliers, and differing scales. Scaling ensures features contribute equally to model loss functions.",
+    "codeSnippets": [
+      {
+        "language": "python",
+        "code": "from sklearn.preprocessing import StandardScaler\n\ndata = [[10.0, 0.001], [20.0, 0.005], [30.0, 0.002]]\nscaler = StandardScaler()\nscaled_data = scaler.fit_transform(data)\nprint(\"Scaled feature values:\\n\", scaled_data)"
+      }
+    ]
+  },
+  {
+    "title": "4. Model Evaluation Metrics",
+    "order": 4,
+    "readingTimeMinutes": 8,
+    "content": "# Model Evaluation Metrics\n\nMeasuring how well a model generalizes using precision, recall, F1-score, and MSE.\n\n### Classification Metrics\n- **Accuracy**: Overall correct predictions fraction.\n- **Precision**: Truly positive out of predicted positive.\n- **Recall**: Truly positive out of actual positives.",
+    "codeSnippets": [
+      {
+        "language": "python",
+        "code": "from sklearn.metrics import classification_report\n\ny_true = [0, 1, 1, 0, 1, 0]\ny_pred = [0, 1, 0, 0, 1, 1]\n\nprint(classification_report(y_true, y_pred, target_names=['Class 0', 'Class 1']))"
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "python-fundamentals",
+    "title": "Python Fundamentals",
+    "description": "Master Python syntax, data structures, and OOP essentials required for AI & ML engineering.",
+    "difficulty": "Beginner",
+    "icon": "🐍",
+    "order": 1
+  },
+  {
+    "slug": "machine-learning",
+    "title": "Machine Learning",
+    "description": "Explore core ML concepts, algorithms, supervised & unsupervised learning, and model evaluation metrics.",
+    "difficulty": "Intermediate",
+    "icon": "🤖",
+    "order": 2
+  },
+  {
+    "slug": "prompt-engineering",
+    "title": "Prompt Engineering",
+    "description": "Learn prompt anatomy, zero/few-shot prompting, Chain-of-Thought (CoT), and LLM system guardrails.",
+    "difficulty": "Beginner",
+    "icon": "⚡",
+    "order": 3
+  }
+]

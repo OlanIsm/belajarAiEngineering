@@ -1,0 +1,50 @@
+[
+  {
+    "title": "1. Anatomy of an Effective Prompt",
+    "order": 1,
+    "readingTimeMinutes": 5,
+    "content": "# Anatomy of an Effective Prompt\n\nPrompt engineering is the art and science of structuring inputs so LLMs produce optimal, reliable outputs.\n\n### Core Components of a Prompt\n1. **Instruction**: What task the model should perform.\n2. **Context**: Background details or constraints.\n3. **Input Data**: The text or payload to process.\n4. **Output Indicator**: Format requirements (e.g., JSON, markdown bullet points).",
+    "codeSnippets": [
+      {
+        "language": "markdown",
+        "code": "### Task\nSummarize the provided technical text into 3 bullet points.\n\n### Context\nThe reader is a software engineer interested in AI architecture.\n\n### Input\n[Insert text here]\n\n### Output Format\nReturn valid JSON: {\"summary\": [\"point1\", \"point2\", \"point3\"]}"
+      }
+    ]
+  },
+  {
+    "title": "2. Zero-Shot vs Few-Shot Prompting",
+    "order": 2,
+    "readingTimeMinutes": 6,
+    "content": "# Zero-Shot vs Few-Shot Prompting\n\n- **Zero-Shot**: Directing the LLM without providing example input-output pairs.\n- **Few-Shot**: Providing 2-5 explicit examples to guide output structure and domain style.",
+    "codeSnippets": [
+      {
+        "language": "markdown",
+        "code": "Classify sentiment as Positive, Negative, or Neutral.\n\nExample 1:\nText: \"The model inference speed is blazing fast!\"\nSentiment: Positive\n\nExample 2:\nText: \"The API threw a 500 internal server error.\"\nSentiment: Negative\n\nNow classify:\nText: \"The server returned a response after 450ms.\"\nSentiment:"
+      }
+    ]
+  },
+  {
+    "title": "3. Chain-of-Thought (CoT) Prompting",
+    "order": 3,
+    "readingTimeMinutes": 7,
+    "content": "# Chain-of-Thought (CoT) Prompting\n\nCoT prompting breaks complex reasoning into step-by-step logic, dramatically improving accuracy for math, code generation, and logical reasoning.",
+    "codeSnippets": [
+      {
+        "language": "markdown",
+        "code": "Q: A rate-limiter allows 10 requests per minute. If a user sends 3 requests every 15 seconds, will they hit the limit?\n\nLet's think step by step:\n1. 15 seconds is 1/4 of a minute (60 / 15 = 4 intervals per minute).\n2. If the user sends 3 requests every 15 seconds, in one minute they send 3 * 4 = 12 requests.\n3. The limit is 10 requests per minute.\n4. Since 12 > 10, the user will exceed the limit.\n\nAnswer: Yes, the rate limit will be hit."
+      }
+    ]
+  },
+  {
+    "title": "4. System Prompts & Guardrails",
+    "order": 4,
+    "readingTimeMinutes": 6,
+    "content": "# System Prompts & Guardrails\n\nSystem prompts define the persona, boundaries, and safety rules of an AI assistant.\n\n### Key Rules for Guardrails\n- Explicitly define allowed vs forbidden topics.\n- Implement fallback messages when queries fall outside scope.\n- Structure outputs strictly (e.g., JSON schema constraints).",
+    "codeSnippets": [
+      {
+        "language": "python",
+        "code": "system_prompt = \"\"\"\nYou are a helpful AI Engineering tutor for BelajarAIEngineering.com.\nRules:\n1. Only answer questions related to AI, Machine Learning, Python, and Prompt Engineering.\n2. If the question is off-topic (e.g., cooking, sports), reply: 'I am your AI Engineering tutor! Let us keep focused on AI learning topic.'\n3. Keep responses concise, friendly, and structured.\n\"\"\""
+      }
+    ]
+  }
+]
