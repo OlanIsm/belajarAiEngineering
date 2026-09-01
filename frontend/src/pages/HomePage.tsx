@@ -119,7 +119,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           {/* 2. MIDDLE ROW (3 CARDS: MODUL COMPLETED, QUIZ COMPLETED, STREAK) */}
           {/* 2. STATS ROW (3 CARDS WITH LARGE ICON BADGES) */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
-            
+
             {/* Card 1: MODUL COMPLETED */}
             <div className="stat-card" style={{ padding: '20px 22px' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
@@ -192,7 +192,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   <p className="font-heading" style={{ fontSize: 24, fontWeight: 800, color: 'var(--text-heading)', margin: 0, lineHeight: 1.2 }}>
                     7 <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--gold-rich)' }}>Hari</span>
                   </p>
-                  
+
                   {/* Mini Days Dots */}
                   <div style={{ display: 'flex', gap: 3, marginTop: 4 }}>
                     {streakDays.map((d, i) => (
@@ -233,10 +233,10 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   width: 44, height: 44, borderRadius: 12, background: 'var(--nm-base)',
                   boxShadow: 'var(--shadow-raise-sm)', display: 'flex', alignItems: 'center', justifyContent: 'center',
                 }}>
-                  <Sparkles size={22} color="var(--gold)" />
+                  <Sparkles size={22} color="#3B82F6" />
                 </div>
                 <div>
-                  <p style={{ fontSize: 11, fontFamily: 'JetBrains Mono', color: 'var(--gold)', fontWeight: 700 }}>
+                  <p style={{ fontSize: 11, fontFamily: 'JetBrains Mono', color: '#3B82F6', fontWeight: 700 }}>
                     CHATBOT TOKEN QUOTA
                   </p>
                   <p style={{ fontSize: 16, fontWeight: 800, color: 'var(--text-heading)' }}>
@@ -249,13 +249,11 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               </div>
 
               {/* Right Action: Mulai Weekly Quiz */}
-              <button
-                className="btn-quiz-start"
+              <GoldButton
+                text="Mulai Weekly Quiz"
                 onClick={() => onNavigate('quiz')}
-                style={{ gap: 8, fontSize: 12, padding: '10px 18px', borderRadius: 12 }}
-              >
-                <Trophy size={15} color="var(--gold)" /> Mulai Weekly Quiz <ArrowRight size={14} />
-              </button>
+                fullWidth={false}
+              />
             </div>
           </div>
 
