@@ -13,12 +13,12 @@
   --nm-dark:  #aaaaaa;
   --nm-light: #ffffff;
 
-  /* Brand */
-  --gold:       #FFD700;
-  --gold-rich:  #D97706;
-  --gold-pale:  #FFF8D0;
-  --patina:     #D97706;
-  --patina-pale: #FEF3C7;
+  /* Brand - Warm Orange Palette */
+  --gold:        #FF7A00;
+  --gold-rich:   #E65100;
+  --gold-pale:   #FFF3E0;
+  --patina:      #E65100;
+  --patina-pale: #FFE0B2;
 
   /* Text - High Contrast Readability */
   --text-heading: #0F172A;
@@ -61,12 +61,12 @@
   --nm-dark:  #0d0e14;
   --nm-light: #202534;
 
-  /* Brand */
-  --gold:       #FFD700;
-  --gold-rich:  #FFC857;
-  --gold-pale:  #2B2400;
-  --patina:     #FFC857;
-  --patina-pale: #2B2400;
+  /* Brand - Warm Orange Palette */
+  --gold:        #FF7A00;
+  --gold-rich:   #FF9100;
+  --gold-pale:   #3E1B00;
+  --patina:      #FF9100;
+  --patina-pale: #3E1B00;
 
   /* Text - Maximum Readability & Sharp Contrast */
   --text-heading: #FFFFFF;
@@ -350,8 +350,9 @@ html, body, #root {
 }
 
 .btn-gold {
-  background: var(--gold);
-  color: var(--text-heading);
+  background: linear-gradient(135deg, #FF7A00, #E65100);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(255, 122, 0, 0.35);
 }
 
 .btn-ghost {
@@ -469,8 +470,8 @@ html, body, #root {
 .progress-fill {
   height: 100%;
   border-radius: var(--radius-pill);
-  background: linear-gradient(90deg, var(--gold-rich), var(--gold));
-  box-shadow: 0 2px 6px rgba(255, 215, 0, 0.4);
+  background: linear-gradient(90deg, #E65100, #FF7A00);
+  box-shadow: 0 2px 6px rgba(255, 122, 0, 0.4);
   transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
 }
 
@@ -669,14 +670,14 @@ html, body, #root {
   gap: 10px;
   padding: 14px 22px;
   border-radius: var(--radius-pill);
-  background: var(--gold);
-  box-shadow: var(--shadow-raise);
+  background: linear-gradient(135deg, #FF7A00, #E65100);
+  box-shadow: 0 6px 20px rgba(255, 122, 0, 0.4);
   border: none;
   cursor: pointer;
   font-family: 'DM Sans', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  color: var(--text-heading);
+  color: #ffffff;
   transition: all 0.15s;
   z-index: 100;
 }
@@ -941,17 +942,17 @@ html, body, #root {
 
 /* ─── UIVERSE GOLD BUTTON ───────────────────────────────── */
 .uiverse-gold-btn {
-  --primary: #2d3748;
-  --neutral-1: #ffd700;
-  --neutral-2: #e5b800;
+  --primary: #ffffff;
+  --neutral-1: #FF7A00;
+  --neutral-2: #E65100;
   --radius: 14px;
 
   cursor: pointer;
   border-radius: var(--radius);
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.4);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   border: none;
   box-shadow: 0 0.5px 0.5px 1px rgba(255, 255, 255, 0.4),
-    0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 5px 0px rgba(0, 0, 0, 0.05);
+    0 10px 20px rgba(255, 122, 0, 0.25), 0 4px 5px 0px rgba(0, 0, 0, 0.05);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1257,14 +1258,14 @@ html, body, #root {
 /* Timeline Item */
 .roadmap-item {
   position: relative;
-  padding-left: 28px;
+  padding-left: 36px;
 }
 
 .roadmap-item::before {
   content: '';
   position: absolute;
-  left: 9px;
-  top: 24px;
+  left: 11px;
+  top: 38px;
   bottom: -20px;
   width: 2px;
   background: rgba(168, 184, 200, 0.35);
@@ -1277,9 +1278,9 @@ html, body, #root {
 .roadmap-node {
   position: absolute;
   left: 0;
-  top: 4px;
-  width: 20px;
-  height: 20px;
+  top: 16px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: var(--nm-base);
   box-shadow: var(--shadow-raise-sm);
@@ -1287,11 +1288,14 @@ html, body, #root {
   align-items: center;
   justify-content: center;
   z-index: 2;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 .roadmap-node.active {
   background: var(--gold);
-  box-shadow: 0 0 8px rgba(255, 215, 0, 0.6), var(--shadow-raise-sm);
+  box-shadow: 0 0 10px rgba(255, 122, 0, 0.6), var(--shadow-raise-sm);
 }
 
 .roadmap-node.completed {

@@ -271,9 +271,9 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                     {isCompleted ? (
                       <Check size={12} color="#ffffff" strokeWidth={3} />
                     ) : isCurrent ? (
-                      <div style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--gold)' }} />
+                      <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#ffffff' }} />
                     ) : (
-                      <span style={{ fontSize: 9, color: 'var(--text-muted)' }}>{index + 1}</span>
+                      <span style={{ fontSize: 10, color: 'var(--text-muted)' }}>{index + 1}</span>
                     )}
                   </div>
 
