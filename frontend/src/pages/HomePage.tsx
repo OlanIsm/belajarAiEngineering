@@ -233,10 +233,10 @@ export default function HomePage({ onNavigate }: HomePageProps) {
                   width: 44, height: 44, borderRadius: 12, background: 'var(--nm-base)',
                   boxShadow: 'var(--shadow-raise-sm)', display: 'flex', alignItems: 'center', justifyContent: 'center',
                 }}>
-                  <Sparkles size={22} color="#3B82F6" />
+                  <Sparkles size={22} color="var(--gold)" />
                 </div>
                 <div>
-                  <p style={{ fontSize: 11, fontFamily: 'JetBrains Mono', color: '#3B82F6', fontWeight: 700 }}>
+                  <p style={{ fontSize: 11, fontFamily: 'JetBrains Mono', color: 'var(--gold)', fontWeight: 700 }}>
                     CHATBOT TOKEN QUOTA
                   </p>
                   <p style={{ fontSize: 16, fontWeight: 800, color: 'var(--text-heading)' }}>
@@ -250,9 +250,9 @@ export default function HomePage({ onNavigate }: HomePageProps) {
 
               {/* Right Action: Mulai Weekly Quiz */}
               <button
-                className="btn btn-ghost"
+                className="btn-quiz-start"
                 onClick={() => onNavigate('quiz')}
-                style={{ gap: 8, fontSize: 12, padding: '8px 16px', borderRadius: 12 }}
+                style={{ gap: 8, fontSize: 12, padding: '10px 18px', borderRadius: 12 }}
               >
                 <Trophy size={15} color="var(--gold)" /> Mulai Weekly Quiz <ArrowRight size={14} />
               </button>

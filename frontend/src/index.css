@@ -362,6 +362,32 @@ html, body, #root {
   color: var(--text-muted);
 }
 
+.btn-quiz-start {
+  background: var(--nm-base);
+  color: var(--text-heading);
+  box-shadow: var(--shadow-raise-sm);
+  border: 1px solid rgba(255, 122, 0, 0.2);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-quiz-start:hover {
+  background: var(--gold-gradient) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  box-shadow: 0 6px 20px rgba(255, 122, 0, 0.5) !important;
+  transform: translateY(-2px);
+}
+
+.btn-quiz-start:hover svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
 .btn-danger {
   background: var(--nm-base);
   color: var(--danger);
