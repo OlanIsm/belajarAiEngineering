@@ -68,70 +68,47 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             </p>
 
             {activeCourse ? (
-              <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', alignItems: 'center' }}>
-                {/* Visual Banner Thumbnail */}
-                <div style={{
-                  width: 130,
-                  height: 110,
-                  borderRadius: 16,
-                  background: 'var(--nm-base)',
-                  boxShadow: 'var(--shadow-inset-sm)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: 6,
-                  flexShrink: 0,
-                  border: '1px solid rgba(255,255,255,0.6)',
-                }}>
-                  <Brain size={36} color="var(--gold-rich)" />
-                  <span style={{ fontSize: 9, fontFamily: 'JetBrains Mono', color: 'var(--text-muted)', fontWeight: 700 }}>
-                    AI ENGINE
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                {/* Course Details */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+                  <span style={{
+                    padding: '3px 10px', borderRadius: 6,
+                    background: 'var(--nm-base)', boxShadow: 'var(--shadow-raise-sm)',
+                    fontSize: 11, fontFamily: 'JetBrains Mono', fontWeight: 700, color: 'var(--gold-rich)',
+                  }}>
+                    {activeCourse.level ?? 'BEGINNER'}
+                  </span>
+                  <span style={{ fontSize: 12, color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: 4 }}>
+                    <Clock size={13} /> {activeCourse.estimatedHours ?? 3} Jam · 3 Bab · 12 Sub-materi
                   </span>
                 </div>
 
-                {/* Course Main Details */}
-                <div style={{ flex: 1, minWidth: 220, display: 'flex', flexDirection: 'column', gap: 8 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <span style={{
-                      padding: '3px 10px', borderRadius: 6,
-                      background: 'var(--nm-base)', boxShadow: 'var(--shadow-raise-sm)',
-                      fontSize: 11, fontFamily: 'JetBrains Mono', fontWeight: 700, color: 'var(--gold-rich)',
-                    }}>
-                      {activeCourse.level ?? 'BEGINNER'}
+                <h2 className="font-heading" style={{ fontSize: 20, fontWeight: 800, color: 'var(--text-heading)', lineHeight: 1.3 }}>
+                  {activeCourse.title}
+                </h2>
+
+                <p style={{ fontSize: 13, color: 'var(--text-body)', lineHeight: 1.5 }}>
+                  {activeCourse.description}
+                </p>
+
+                {/* Progress Bar */}
+                <div style={{ marginTop: 4 }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+                    <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>Progres Modul</span>
+                    <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-heading)' }}>
+                      {Math.round(activeCourse.progress ?? 66)}%
                     </span>
-                    <span style={{ fontSize: 11, color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: 4 }}>
-                      <Clock size={12} /> {activeCourse.estimatedHours ?? 3} Jam · 3 Bab · 12 Sub-materi
-                    </span>
                   </div>
+                  <ProgressBar percentage={activeCourse.progress ?? 66} />
+                </div>
 
-                  <h2 className="font-heading" style={{ fontSize: 18, fontWeight: 800, color: 'var(--text-heading)', lineHeight: 1.3 }}>
-                    {activeCourse.title}
-                  </h2>
-
-                  <p style={{ fontSize: 12, color: 'var(--text-body)', lineHeight: 1.5 }}>
-                    {activeCourse.description}
-                  </p>
-
-                  {/* Progress Bar */}
-                  <div style={{ marginTop: 2 }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4 }}>
-                      <span style={{ fontSize: 11, color: 'var(--text-muted)' }}>Progres Modul</span>
-                      <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--text-heading)' }}>
-                        {Math.round(activeCourse.progress ?? 66)}%
-                      </span>
-                    </div>
-                    <ProgressBar percentage={activeCourse.progress ?? 66} />
-                  </div>
-
-                  {/* CTA Button */}
-                  <div style={{ marginTop: 10 }}>
-                    <GoldButton
-                      text="Lanjut Belajar"
-                      onClick={() => handleStartCourse(activeCourseId)}
-                      fullWidth={false}
-                    />
-                  </div>
+                {/* CTA Button */}
+                <div style={{ marginTop: 10 }}>
+                  <GoldButton
+                    text="Lanjut Belajar"
+                    onClick={() => handleStartCourse(activeCourseId)}
+                    fullWidth={false}
+                  />
                 </div>
               </div>
             ) : (

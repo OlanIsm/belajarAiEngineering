@@ -81,6 +81,7 @@ export default function App() {
         title="Tanya AI Tutor"
         aria-label="AI Tutor Chatbot"
       >
+        <div className="mascot-speech-bubble">Tanya Aku! 💬</div>
         <img src="/macot_chatbot_icon.png" alt="AI Tutor Mascot" className="mascot-img" />
         <span className="online-dot" />
       </button>
